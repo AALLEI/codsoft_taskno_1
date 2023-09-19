@@ -23,23 +23,6 @@ void guess(int number) {
         cout << "                                     # OF GUESSES " << count << endl;
         cout << endl;
 
-        if (flag > 5) {
-            cout << " TO SEE NUMBER PLZ ENTER ' X ' AND ' F ' FOR CONTINUE  ";
-            char option;
-            cin >> option;
-
-            if (option == 'X') {
-                cout << " OOPS ! YOU LOST " << endl;
-                cout << "NUMBER IS " << number;
-                break;
-            }
-            else {
-                cout << "KEEP IT UP " << endl;
-                flag = 0;
-                continue;
-            }
-        }
-
         if (guess_number == number) {
             cout << " AWESOME! YOU DID IT " << endl;                      // Conditions for the check of player input
             break;
@@ -71,6 +54,22 @@ void guess(int number) {
             cin >> guess_number;
             count++;
             flag++;
+        }
+        if (flag > 5) {
+            cout << " TO SEE NUMBER PLZ ENTER ' X ' AND ' F ' FOR CONTINUE  ";
+            char option;
+            cin >> option;
+
+            if (option == 'X') {
+                cout << " OOPS ! YOU LOST " << endl;
+                cout << "NUMBER IS " << number;
+                break;
+            }
+            else {
+                cout << "KEEP IT UP " << endl;
+                flag = 0;
+                continue;
+            }
         }
         system("cls"); // Clear the console screen
     }
