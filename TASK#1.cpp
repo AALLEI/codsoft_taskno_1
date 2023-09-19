@@ -72,7 +72,6 @@ void guess(int number) {
             count++;
             flag++;
         }
-        system("pause") // Pause the console screen
         system("cls"); // Clear the console screen
     }
 }
