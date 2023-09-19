@@ -79,5 +79,5 @@ int main() {
     int no = random_number();
     guess(no);
 
-    return 0;
+    return 0 ;
 }
